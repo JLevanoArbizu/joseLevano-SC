@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Face API</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Relenar formulario para detectar Face</h1>
+	<form action="#" th:action="@{/detect}" th:object="${model}"
+		method="post">
+		<p>
+			API key: <input type="text" th:field="*{key}" />
+		</p>
+		<p>
+			Picture URL: <input type="text" th:field="*{url}" />
+		</p>
+		<p>
+			Face Attributes (age, gender, headPose, smile, facialHair, glasses,
+			emotion, hair, makeup, occlusion, accessories, blur, exposure,
+			noise): <input type="text" th:field="*{attributes}" />
+		</p>
+		<p>
+			<input type="submit" value="Submit" /> <input type="reset"
+				value="Reset" />
+		</p>
+	</form>
+
+</body>
+
+
+
+</html>
